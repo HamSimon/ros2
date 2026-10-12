@@ -1,16 +1,22 @@
 # 基于 Mujoco 的两轮小车运动仿真
 
+## 任务说明
+本人选择任务（1）：车辆运动仿真，使用 Mujoco 物理引擎对两轮小车进行运动仿真，通过 launch 启动仿真程序。
+
 ## 运行环境
-- Windows / Ubuntu 20.04
+- Windows 10/11 或 Ubuntu 20.04
 - Python 3.8+
 - Mujoco 3.15.0
+- ROS Noetic（用于 launch 启动）
 
 ## 依赖安装
-pip install mujoco
+1. 安装 Mujoco：
+   pip install mujoco
+2. 安装 ROS Noetic（Ubuntu 环境）。
 
 ## 运行步骤
-1. 打开终端，进入项目文件夹
-2. 输入 `python main.py`
+1. 打开终端，输入 `roscore`
+2. 新开终端，输入 `roslaunch mujoco_sim mujoco_sim.launch`
 3. 观察 Mujoco 窗口中红色小车在灰色地面上向前移动
 
 ## 运行结果
