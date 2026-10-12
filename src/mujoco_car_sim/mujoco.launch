@@ -1,0 +1,3 @@
+<launch>
+    <node name="mujoco_car_sim" pkg="mujoco_sim" type="main.py" output="screen"/>
+</launch>
