@@ -8,6 +8,14 @@
 - ROS Noetic
 - Python 3.8
 
+##文件结构
+src/
+└── vehicle_rviz_sim/
+├── main.py                # 键盘控制主程序
+├── vehicle_sim.launch     # launch 启动文件
+├── mkdocs.yml             # mkdocs 文档配置
+├── serve.bat              # 一键预览文档脚本
+
 ## 仿真步骤
 1. 打开终端，输入 `roscore`
 2. 新开终端，进入工作空间，输入 `source devel/setup.bash`
