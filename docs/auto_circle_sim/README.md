@@ -9,19 +9,26 @@
 ```
 src/
 └── auto_circle_sim/
-├── main.py                # 自动画圆主程序
-├── auto_circle_sim.launch # launch 启动文件
-├── mkdocs.yml             # mkdocs 文档配置
-├── serve.bat              # 一键预览文档脚本
+├── package.xml
+├── CMakeLists.txt
+├── launch/
+│   └── auto_circle_sim.launch
+├── rviz/
+│   └── auto_circle.rviz
+└── scripts/
+└── main.py
 ```
+## 依赖安装
+1. 安装 pynput：
+   pip install pynput
+2. 安装 ROS Noetic（Ubuntu 环境）。
 
 ## 运行步骤
-1. 打开终端，输入 `roscore`
-2. 新开终端，进入工作空间，输入 `source devel/setup.bash`
-3. 输入 `roslaunch auto_circle_sim auto_circle.launch`
-4. rviz 打开后，将 `Fixed Frame` 设为 `map`
-5. 添加 `Marker` 显示，Topic 设为 `/vehicle_marker`
-6. 观察红色方块自动画出圆形轨迹
+1. 打开终端，进入工作空间，输入 `source devel/setup.bash`
+2. 输入 `roslaunch auto_circle_sim auto_circle_sim.launch`
+3. rviz 会自动打开并加载 Marker 显示，
+4. 观察红色方块自动画出圆形轨迹
+
 
 ## 运行结果
 ![运行效果](vehicle_circle.gif)
