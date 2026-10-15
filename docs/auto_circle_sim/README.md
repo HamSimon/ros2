@@ -5,6 +5,16 @@
 - ROS Noetic
 - Python 3.8
 
+##文件结构
+```
+src/
+└── auto_circle_sim/
+├── main.py                # 自动画圆主程序
+├── auto_circle_sim.launch # launch 启动文件
+├── mkdocs.yml             # mkdocs 文档配置
+├── serve.bat              # 一键预览文档脚本
+```
+
 ## 运行步骤
 1. 打开终端，输入 `roscore`
 2. 新开终端，进入工作空间，输入 `source devel/setup.bash`
