@@ -10,21 +10,21 @@
 
 ##文件结构
 ```
-src/
-└── vehicle_rviz_sim/
-├── main.py                # 键盘控制主程序
-├── vehicle_sim.launch     # launch 启动文件
-├── mkdocs.yml             # mkdocs 文档配置
-├── serve.bat              # 一键预览文档脚本
+vehicle_rviz_sim/
+├── package.xml
+├── CMakeLists.txt
+├── vehicle_sim.launch
+├── rviz/
+│   └── vehicle.rviz          
+└── scripts/
+    └── main.py
 ```
+## 运行步骤
+1. 打开终端，进入工作空间，输入 `source devel/setup.bash`
+2. 输入 `roslaunch vehicle_rviz_sim vehicle_sim.launch`
+3. rviz 自动打开并加载 Marker 显示，无需手动配置
+4. 另开终端，输入 `rosrun vehicle_rviz_sim main.py`，用键盘 W/A/S/D 控制车辆移动
 
-## 仿真步骤
-1. 打开终端，输入 `roscore`
-2. 新开终端，进入工作空间，输入 `source devel/setup.bash`
-3. 输入 `roslaunch vehicle_rviz_sim vehicle_sim.launch`
-4. rviz 打开后，将 Fixed Frame 设为 `map`
-5. 添加 `Marker` 显示，Topic 设为 `/vehicle_marker`
-6. 观察红色方块在 3D 网格中自动行驶，并用wads控制小车运动
 
 ## 运行结果
 ![运行效果](vehicle_sim.gif)
