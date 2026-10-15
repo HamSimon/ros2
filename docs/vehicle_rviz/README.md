@@ -8,6 +8,11 @@
 - ROS Noetic
 - Python 3.8
 
+## 依赖安装
+1. 安装 pynput：
+   pip install pynput
+2. 安装 ROS Noetic（Ubuntu 环境）。
+
 ##文件结构
 ```
 ros2/                          
