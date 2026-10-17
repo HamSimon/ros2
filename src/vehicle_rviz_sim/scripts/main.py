@@ -33,7 +33,7 @@ def keyboard_control():
             theta += 0.2
         elif key == 'd':
             theta -= 0.2
-        elif key == '\x03':  # Ctrl+C
+        elif key == '\x03':
             break
 
         marker = Marker()
