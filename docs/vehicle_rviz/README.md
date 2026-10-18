@@ -26,18 +26,14 @@ ros2/
         │   └── vehicle.rviz
         └── scripts/
             └── main.py
-```## 运行步骤
-1. 添加可执行权限：
-   chmod +x ~/catkin_ws/src/vehicle_rviz_sim/scripts/main.py
-2. 打开终端，进入工作空间：
-   source devel/setup.bash
-3. 启动 launch 文件：
-   roslaunch vehicle_rviz_sim vehicle_sim.launch
-4. 在 rviz 中，点击左下角 Add 添加 Marker 插件，并将 Marker 的 Topic 设为 `/vehicle_marker`，Fixed Frame 设为 `map`。
-5. 另开终端，运行键盘控制：
-   rosrun vehicle_rviz_sim main.py
+```
+## 运行步骤
+1. 打开终端，给脚本添加可执行权限：chmod +x catkin_ws/src/vehicle_rviz_sim/scripts/main.py
+2. 进入工作空间：source devel/setup.bash
+3. 启动 launch 文件：roslaunch vehicle_rviz_sim vehicle_sim.launch
+4. 在 rviz 中，点击左下角 Add 添加 Marker 插件，并将 Marker 的 Topic 设为 /vehicle_marker，Fixed Frame 设为 map。
+5. 另开终端，运行键盘控制：rosrun vehicle_rviz_sim main.py
 6. 鼠标点击终端，使用 W/A/S/D 控制车辆移动。
-
 
 ## 运行结果
 ![运行效果](vehicle_sim.gif)
