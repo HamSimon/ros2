@@ -1,0 +1,10 @@
+<launch>
+    <!-- 发布虚拟 TF，确保 RViz 正常渲染 -->
+    <node pkg="tf" type="static_transform_publisher" name="dummy_tf" args="0 0 0 0 0 0 map base_link 100" />
+    
+    <!-- 启动核心控制节点 -->
+    <node name="lidar_avoidance_sim" pkg="lidar_avoidance_sim" type="main.py" output="screen"/>
+    
+    <!-- 启动 Rviz 并加载配置 -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find lidar_avoidance_sim)/rviz/lidar.rviz"/>
+</launch>
