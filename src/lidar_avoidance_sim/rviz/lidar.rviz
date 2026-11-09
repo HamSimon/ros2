@@ -1,0 +1,38 @@
+Panels:
+  - Class: rviz/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz/Grid
+      Enabled: true
+      Name: Grid
+    - Class: rviz/Marker
+      Enabled: true
+      Name: CarMarker
+      Topic: /car_visual
+    - Class: rviz/Marker
+      Enabled: true
+      Name: WallMarker
+      Topic: /wall_visual
+    - Class: rviz/LaserScan
+      Enabled: true
+      Name: LidarScan
+      Topic: /scan
+      Style: Flat Squares
+      Size (m): 0.1
+      Color Transformer: FlatColor
+      Color: 255; 0; 0
+  Global Options:
+    Fixed Frame: map
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 15
+      Focal Point:
+        X: 2.5
+        Y: 0
+        Z: 0
+      Name: Current View
+      Pitch: 1.57
+      Yaw: 0
